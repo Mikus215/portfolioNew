@@ -33,6 +33,7 @@ const Info=styled(motion.div)`
     margin-top: 2rem;
     p{
         font-size: 1.2rem;
+        margin: 1rem;
     }
     
 `;
