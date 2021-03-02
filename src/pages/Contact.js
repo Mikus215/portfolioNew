@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
+import {fade} from '../animation';
 const Contact = () => {
     return ( 
-        <ContactStyled>
+        <ContactStyled variants={fade} initial="hidden" animate="show">
             <h1>Contact</h1>
             <Line></Line>
             <Info>

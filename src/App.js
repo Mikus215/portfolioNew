@@ -7,11 +7,14 @@ import Nav from './components/Nav';
 import AboutMePage from './pages/AboutMePage';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <div>
       <GlobalStyle/>
+      <ScrollToTop/>
       <Nav/>
         <Switch>
           <Route path="/" exact>
@@ -24,6 +27,7 @@ function App() {
               <Contact/>  
           </Route>
         </Switch>
+        <Footer/>
     </div>
   );
 }

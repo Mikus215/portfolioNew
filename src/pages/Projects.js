@@ -3,16 +3,18 @@ import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {ProjectsState} from '../ProjectsDes';
 import Card from '../components/Card';
+import {fade} from '../animation';
+
 
 const Projects = () => {
     const [projectsDetail,setProjectsDetail] = useState(ProjectsState)
-     
+
     return ( 
-        <ProjectsStyled>
+        <ProjectsStyled variants={fade} initial="hidden" animate="show">
             <h1>Projects</h1>
             <Line></Line>
             <Cards>
-                {projectsDetail.map(el=> <Card title={el.title} img={el.mainImg} live={el.live} github={el.github} description={el.description} key={el.title}/>   )}
+                {projectsDetail.map(el=> <Card title={el.title} img={el.mainImg} live={el.live} github={el.github} description={el.description} key={el.title}/>)}
             </Cards>
         </ProjectsStyled>
      );

@@ -1,7 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import {motion} from 'framer-motion';
 
 const Card = ({title,img,live,github,description}) => {
+
     return ( 
         <StyledCard>
             <h1>{title}</h1>
@@ -19,7 +21,6 @@ const Card = ({title,img,live,github,description}) => {
 const StyledCard=styled.div`
 display: flex;
 flex-direction: column;
-/* justify-content: center; */
 align-items: center;
 padding: 3rem 6rem;
 @media(max-width: 1500px){
