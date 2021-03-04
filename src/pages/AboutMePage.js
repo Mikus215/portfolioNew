@@ -4,6 +4,7 @@ import {motion} from 'framer-motion';
 import {fade} from '../animation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faPaste} from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 const AboutMePage = () => {
     return ( 
         <About variants={fade} initial="hidden" animate="show">
@@ -20,6 +21,10 @@ const AboutMePage = () => {
                     Sometimes I read books. I could work in an office in Katowice, close to the area or remotely.
                     
                     My CV: <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank"  rel="noopener noreferrer"><FontAwesomeIcon icon={faPaste} /></a>
+                </p>
+                <p>
+                I made my portfolio by programming in react.
+                Code:  <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank"  rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} /></a>
                 </p>
             </Text>
             <Skills>
@@ -65,7 +70,7 @@ const Text = styled.div`
     a{     
     padding: 1rem;
     color: white;
-    font-size: 2rem;
+    font-size: 2.2rem;
     }
 `;
 const Skills = styled.div`

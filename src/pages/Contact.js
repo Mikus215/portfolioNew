@@ -29,7 +29,7 @@ flex-direction: column;
 align-items: center;
 color: white;
 padding: 3rem 1rem;
-min-height: 90vh;
+height: 90vh;
 `;
 const Info=styled(motion.div)`
     display: flex;

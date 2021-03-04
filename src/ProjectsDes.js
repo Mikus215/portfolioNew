@@ -13,7 +13,7 @@ export const ProjectsState = () => {
         mainImg: music,
         live: "https://music-app-h.netlify.app/",
         github: "https://github.com/Mikus215/Music-App",
-        description: "Music application, I used to create it mainly Reacta."
+        description: "Music application, I used to create it mainly React."
       },
       {
         title: "Hairdresser",
