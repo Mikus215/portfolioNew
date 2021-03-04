@@ -24,16 +24,16 @@ const AboutMePage = () => {
                 </p>
                 <p>
                 I made my portfolio by programming in react.
-                Code:  <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank"  rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} /></a>
+                Code:  <a href="https://github.com/Mikus215/portfolioNew" target="_blank"  rel="noopener noreferrer"><FontAwesomeIcon icon={faGithubSquare} /></a>
                 </p>
             </Text>
             <Skills>
                 <Skill><p>HTML</p></Skill>
                 <Skill><p>CSS</p></Skill>
-                <Skill><p>SASS</p></Skill>
                 <Skill><p>SCSS (BEM)</p></Skill>
                 <Skill><p>JavaScript (ES6+)</p></Skill>
                 <Skill><p>React</p></Skill>
+                <Skill><p>SASS</p></Skill>
                 <Skill><p>Git</p></Skill>
                 <Skill><p>GitHub</p></Skill>
                 <Skill><p>API</p></Skill>
