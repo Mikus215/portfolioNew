@@ -19,7 +19,6 @@ const AboutMePage = () => {
                     I would like to work with more experienced people, to learn from them, and develop my skills. 
                     I also like watching TV series, playing games and doing any sport. 
                     Sometimes I read books. I could work in an office in Katowice, close to the area or remotely.
-                    
                     My CV: <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank"  rel="noopener noreferrer"><FontAwesomeIcon icon={faPaste} /></a>
                 </p>
                 <p>
