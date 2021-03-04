@@ -8,7 +8,9 @@ import {fade} from '../animation';
 
 const Projects = () => {
     const [projectsDetail,setProjectsDetail] = useState(ProjectsState)
+ 
 
+    
     return ( 
         <ProjectsStyled variants={fade} initial="hidden" animate="show">
             <h1>Projects</h1>

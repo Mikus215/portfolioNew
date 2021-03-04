@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import {motion} from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faGlobeAmericas,faCode} from '@fortawesome/free-solid-svg-icons';
+
 
 const Card = ({title,img,live,github,description}) => {
 
@@ -10,8 +12,8 @@ const Card = ({title,img,live,github,description}) => {
             <Line></Line>
             <a href={live} target="_blank" rel="noopener noreferrer"><img src={img} alt=""/></a>
             <SpaceBetweenA>
-                <a href={live} target="_blank" rel="noopener noreferrer"><span>Live: </span><i class="fas fa-globe-americas"></i></a>
-                <a href={github} target="_blank" rel="noopener noreferrer"><span>Code: </span><i class="fas fa-code"></i></a>
+                <a href={live} target="_blank" rel="noopener noreferrer"><span>Live: </span><FontAwesomeIcon icon={faGlobeAmericas} /></a>
+                <a href={github} target="_blank" rel="noopener noreferrer"><span>Code: </span><FontAwesomeIcon icon={faCode} /></a>
             </SpaceBetweenA>
             <p>{description}</p>
         </StyledCard>
@@ -23,6 +25,7 @@ display: flex;
 flex-direction: column;
 align-items: center;
 padding: 3rem 6rem;
+text-align: center;
 @media(max-width: 1500px){
     padding: 2rem 1rem;
 }
@@ -38,6 +41,7 @@ img{
 }
 p{
         font-size: 1.6rem;
+        margin-top: 1.2rem;
     }
 `;
 const SpaceBetweenA=styled.div`

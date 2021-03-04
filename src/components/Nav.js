@@ -1,20 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {useLocation} from 'react-router-dom';
 import {motion} from 'framer-motion';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
     const {pathname} = useLocation();
-    console.log(pathname);
+    const windowWidth = window.innerWidth;
+    const [navShow,setNavShow] = useState(false);
+    const navActive = ()=> {
+        setNavShow(!navShow);
+    }
     return ( 
-        <StyledNav>
+        <>
+        <FontAwesomeIcon icon={faBars} className={windowWidth<=600 ? "show":"hide"} size="3x" onClick={navActive}/>
+        <StyledNav className={navShow===true ? "showNav" : ""}>
                 <h1> 
-                    <Link to="/"> Home </Link>
+                    <Link to="/" onClick={navActive}> Home </Link>
                 </h1>
                 <ul>
                     <li>
-                        <Link to="/"> About me </Link>
+                        <Link to="/" onClick={navActive}> About me </Link>
                         <Line
                         transition={{duration: .75}}
                         initial={{width: "0%"}}
@@ -23,7 +31,7 @@ const Nav = () => {
 
                     </li>
                     <li>
-                        <Link to="/projects"> Projects </Link>
+                        <Link to="/projects" onClick={navActive}> Projects </Link>
                         <Line
                         transition={{duration: .75}}
                         initial={{width: "0%"}}
@@ -31,7 +39,7 @@ const Nav = () => {
                         />
                     </li>
                     <li>
-                        <Link to="/contact"> Contact me </Link>
+                        <Link to="/contact" onClick={navActive}> Contact me </Link>
                         <Line
                         transition={{duration: .75}}
                         initial={{width: "0%"}}
@@ -40,6 +48,7 @@ const Nav = () => {
                     </li>
                 </ul>
         </StyledNav>
+        </>
      );
 }
 
@@ -53,6 +62,26 @@ const StyledNav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
+    @media(max-width: 600px){
+        flex-direction: column;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        transform: translateX(-100%);
+        opacity: 0;
+        transition: transform .5s cubic-bezier(0.645, 0.045, 0.355, 1),opacity .5s cubic-bezier(0.77, 0, 0.175, 1);
+        ul{
+            flex-direction: column;
+            text-align: center;
+            li{
+                a{
+                    display: inline-block;
+                    padding: 1.4rem;
+                }
+            }
+        }
+    }
     a{
         color: white;
         text-decoration: none;
@@ -60,6 +89,7 @@ const StyledNav = styled.nav`
     h1{
         font-size: 1.8rem;
         font-family: Akaya Telivigala;
+        padding: 2rem;
     }
     ul{
         display: flex;
@@ -82,6 +112,9 @@ const Line = styled(motion.div)`
  left: 0%;
  @media(max-width: 1300px){
      left: 0;
+ }
+ @media(max-width: 600px){
+     bottom: 20%;
  }
 `;
 export default Nav;

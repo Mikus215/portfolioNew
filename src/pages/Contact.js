@@ -2,18 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 import {motion} from 'framer-motion';
 import {fade} from '../animation';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faPaste} from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare,faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 const Contact = () => {
     return ( 
         <ContactStyled variants={fade} initial="hidden" animate="show">
             <h1>Contact</h1>
             <Line></Line>
             <Info>
-                <p>My e-mail: <p>mikimarsz215@gmail.com</p></p>
-                <p>My phone number: <p>574-499-047</p></p>
+                <p>My e-mail:</p> <p>mikimarsz215@gmail.com</p>
+                <p>My phone number:</p> <p>574-499-047</p>
                 <Icons>
-                <a href="https://www.facebook.com/mikimarsz/" target="_blank"><i class="fab fa-facebook-square class" ></i></a>
-                <a href="https://github.com/Mikus215" target="_blank"><i class="fab fa-github-square class"></i></a>
-                <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank"><i class="fas fa-paste"></i></a>
+                <a href="https://www.facebook.com/mikimarsz/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faFacebookSquare} /></a>
+                <a href="https://github.com/Mikus215" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithubSquare} /></a>
+                <a href="https://drive.google.com/file/d/1QK7hJaEhMI2QXa7y9q0825Uj6PHo39EE/view?usp=sharing" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faPaste} /></a>
                 </Icons>
             </Info>
         </ContactStyled>
@@ -43,7 +46,7 @@ const Icons=styled(motion.div)`
 display: flex;
 justify-content: center;
 margin-top: 1rem;
-i{     
+a{     
     padding: 1rem;
     color: white;
     font-size: 2rem;
