@@ -5,6 +5,7 @@ import pizza from './img/pizza.PNG';
 import prcgame from './img/prcgame.png';
 import toDoList from './img/todolist.png';
 import weatherPicture from './img/weatherPicture.png';
+import apiFilm from './img/apiFilm.PNG';
 
 export const ProjectsState = () => {
     return [
@@ -21,6 +22,13 @@ export const ProjectsState = () => {
         live: "https://nefretetefryzjer.pl/",
         github: "https://github.com/Mikus215/test21345456",
         description: "Project for a local hairdresser. I used html, JavaScript , SCSS(BEM)."
+      },
+      {
+        title: "Films",
+        mainImg: apiFilm,
+        live: "https://filmsapi.netlify.app/",
+        github: "https://github.com/Mikus215/films",
+        description: "The project was created to practice API and to show my skills. I used React and axios."
       },
       {
         title: "Pizza Restaurant",
